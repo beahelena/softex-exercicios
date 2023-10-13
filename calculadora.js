@@ -1,3 +1,5 @@
+const readline = require('readline-sync');
+
 function calcular(valor1, valor2, operador) {
     let resultado;
     let resto;
@@ -27,10 +29,9 @@ function calcular(valor1, valor2, operador) {
     }
 }
 
-
-const valor1 = parseFloat(prompt("Digite o primeiro valor:"));
-const operador = prompt("Digite o operador (+, -, *, /):");
-const valor2 = parseFloat(prompt("Digite o segundo valor:"));
+const valor1 = parseFloat(readline.question("Digite o primeiro valor: "));
+const operador = readline.question("Digite o operador (+, -, *, /): ");
+const valor2 = parseFloat(readline.question("Digite o segundo valor: "));
 
 const resultado = calcular(valor1, valor2, operador);
 console.log(resultado);
